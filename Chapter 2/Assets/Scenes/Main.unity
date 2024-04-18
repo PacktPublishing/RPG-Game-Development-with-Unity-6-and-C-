@@ -880,11 +880,6 @@ PrefabInstance:
       propertyPath: _velocityFactor
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 7433680853006878804, guid: f6005fc9d82563840916efb714da6303,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9126163417273461971, guid: f6005fc9d82563840916efb714da6303,
         type: 3}
       propertyPath: m_LocalPosition.x

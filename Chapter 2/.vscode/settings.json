@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Chapter 1.sln"
+    "dotnet.defaultSolution": "Chapter 2.sln"
 }

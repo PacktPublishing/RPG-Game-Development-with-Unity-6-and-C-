@@ -105,7 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 7433680853006878804}
   _characterController: {fileID: 7136689080114625838}
-  _velocityFactor: 1
+  _velocityFactor: 2
 --- !u!1001 &7328386576482980419
 PrefabInstance:
   m_ObjectHideFlags: 0
