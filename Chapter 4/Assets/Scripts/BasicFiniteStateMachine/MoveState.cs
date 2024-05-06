@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace BasicFiniteStateMachine
 {
     public class MoveState : IState
