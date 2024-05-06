@@ -2,6 +2,7 @@ namespace Fight
 {
     public interface IReceiveDamage
     {
-        void TakeDamage(int value);
+        public void ReceiveDamage(int damage);
+
     }
 }

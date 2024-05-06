@@ -5,24 +5,20 @@ namespace Fight
 {
     public class DamageTaker : MonoBehaviour
     {
-        [SerializeField] private DamageCauser _damageCauserToIgnore;
-        private List<IReceiveDamage> _damageReceivers = new();
+        private List<IReceiveDamage> DamageReceivers = new();
 
         public void RegisterDamageReceiver(IReceiveDamage damageReceiver)
         {
-            _damageReceivers.Add(damageReceiver);
+            DamageReceivers.Add(damageReceiver);
         }
 
         void OnTriggerEnter(Collider _other)
         {
-            if (_other.TryGetComponent(out DamageCauser damageCauser))
+            if(_other.TryGetComponent(out DamageCauser damageCauser))
             {
-                if(damageCauser != _damageCauserToIgnore)
+                foreach(IReceiveDamage damageReceiver in DamageReceivers)
                 {
-                    foreach(var damageReceiver in _damageReceivers)
-                    {
-                        damageReceiver.TakeDamage(damageCauser.DamageToCause);
-                    }
+                    damageReceiver.ReceiveDamage(damageCauser.DamageToCause);
                 }
             }
         }

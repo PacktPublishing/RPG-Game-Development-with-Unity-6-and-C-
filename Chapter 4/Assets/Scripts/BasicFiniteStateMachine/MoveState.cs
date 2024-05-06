@@ -4,41 +4,32 @@ namespace BasicFiniteStateMachine
 {
     public class MoveState : IState
     {
-        private const float moveSpeed = 1;
         private Actor _actor;
-        private Transform _playerTransform;
-        private CharacterController _actorCharacterController;
-        private Animator _animator;
 
-        public MoveState(Actor actor, Transform playerTransform, CharacterController characterController, Animator animator)
+        public MoveState(Actor actor)
         {
             _actor = actor;
-            _playerTransform = playerTransform;
-            _actorCharacterController = characterController;
-            _animator = animator;
         }
 
-        public void OnEntry()
+        public void OnStateEnter()
         {
-             _animator.SetBool("IsWalking", true);
+            _actor.SetIsWalking(true);
         }
 
-        public void OnExit()
+        public void OnStateExit()
         {
-             _animator.SetBool("IsWalking", false);
+            _actor.SetIsWalking(false);
         }
 
-        public void OnUpdate()
+        public void OnStateUpdate()
         {
-            if((_playerTransform.position - _actor.transform.position).sqrMagnitude < 3)
+            if(_actor.GetVectorBetweenPlayerAndActor().sqrMagnitude > 3)
             {
-                _actor.SwitchToState(StateEnum.None);
+                _actor.MoveTowardsPlayer();
             }
             else
             {
-                var lookRotation = Quaternion.LookRotation(_playerTransform.position - _actor.transform.position);
-                _actor.transform.rotation = lookRotation;
-                _actorCharacterController.Move(_actor.transform.forward * moveSpeed * Time.deltaTime);
+                _actor.SwitchState(StateEnum.None);
             }
         }
     }

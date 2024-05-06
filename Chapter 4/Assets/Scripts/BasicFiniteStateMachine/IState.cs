@@ -2,8 +2,8 @@ namespace BasicFiniteStateMachine
 {
     public interface IState
     {
-        void OnEntry();
-        void OnUpdate();
-        void OnExit();
+        public void OnStateEnter();
+        public void OnStateUpdate();
+        public void OnStateExit();
     }
 }

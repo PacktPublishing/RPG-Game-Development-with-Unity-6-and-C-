@@ -4,35 +4,33 @@ namespace BasicFiniteStateMachine
 {
     public class NoneState : IState
     {
-        private Transform _playerTransform;
         private Actor _actor;
 
-        public NoneState(Transform playerTransform, Actor actor)
+        public NoneState(Actor actor)
         {
-            _playerTransform = playerTransform;
             _actor = actor;
         }
 
-        public void OnEntry()
+        public void OnStateEnter()
         {
-            
-        }
-
-        public void OnExit()
-        {
-            
-        }
-
-        public void OnUpdate()
-        {
-            if((_playerTransform.position - _actor.transform.position).sqrMagnitude < 3)
+            if(_actor.GetVectorBetweenPlayerAndActor().sqrMagnitude > 3)
             {
-                _actor.SwitchToState(StateEnum.Attack);
+                _actor.SwitchState(StateEnum.Move);
             }
             else
             {
-                _actor.SwitchToState(StateEnum.Move);
+                _actor.SwitchState(StateEnum.Attack);
             }
+        }
+
+        public void OnStateExit()
+        {
+            
+        }
+
+        public void OnStateUpdate()
+        {
+            
         }
     }
 }

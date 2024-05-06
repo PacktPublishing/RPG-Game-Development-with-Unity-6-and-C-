@@ -1,9 +1,9 @@
 namespace BasicFiniteStateMachine
 {
-    public enum StateEnum
-    {
-        None,
-        Attack,
-        Move
-    }
+public enum StateEnum
+{
+    None,
+    Move,
+    Attack
+}
 }

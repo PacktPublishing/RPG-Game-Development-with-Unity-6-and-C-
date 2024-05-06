@@ -2,6 +2,6 @@ namespace Fight
 {
     public interface IHaveHealth
     {
-        int Health { get; }
+        public int Health {get;}
     }
 }

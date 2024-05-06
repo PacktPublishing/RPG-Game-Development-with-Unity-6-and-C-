@@ -29,7 +29,7 @@ public class PlayerCharacterController : MonoBehaviour
 
     void WalkUpdate()
     {
-        if (_moveInput == Vector2.zero)
+        if(_moveInput == Vector2.zero)
         {
             _animator.SetBool("IsWalking", false);
             _isWalking = false;
@@ -50,7 +50,7 @@ public class PlayerCharacterController : MonoBehaviour
         _animator.SetBool("IsBlocking", true);
     }
 
-
+    
     void OnBlockUp(InputAction.CallbackContext callbackContext)
     {
         _animator.SetBool("IsBlocking", false);
@@ -58,7 +58,7 @@ public class PlayerCharacterController : MonoBehaviour
 
     void OnAttack(InputValue input)
     {
-        if (_isWalking)
+        if(_isWalking)
         {
             return;
         }
