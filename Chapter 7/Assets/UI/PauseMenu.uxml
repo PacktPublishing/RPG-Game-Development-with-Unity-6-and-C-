@@ -1,0 +1,9 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/GameStyle.uss?fileID=7433441132597879392&amp;guid=b5a3bdbee9a424e48a1540907c4b286c&amp;type=3#GameStyle" />
+    <engine:VisualElement name="BackgroundRoot" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.4); justify-content: flex-start;">
+        <engine:VisualElement name="ButtonsPanel" style="flex-grow: 1; flex-shrink: 1; align-items: stretch; align-self: center; align-content: center; justify-content: center; width: 209px; height: 486px; background-color: rgba(0, 0, 0, 0);">
+            <engine:Button text="Resume" name="ResumeButton" />
+            <engine:Button text="Quit" name="QuitButton" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

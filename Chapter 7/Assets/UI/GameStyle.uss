@@ -1,0 +1,12 @@
+Button {
+    background-image: url("project://database/Assets/Art/01_Flat_Theme/Spritesheets/Spritesheet_UI_Flat.png?fileID=-151645339&guid=f21048e8a8e76b14096daa4fc9a6fdf3&type=3#Spritesheet_UI_Flat_8");
+    background-color: rgb(255, 255, 255);
+    -unity-background-image-tint-color: rgb(233, 233, 233);
+}
+
+Button:hover {
+    background-image: url("project://database/Assets/Art/01_Flat_Theme/Spritesheets/Spritesheet_UI_Flat.png?fileID=-151645339&guid=f21048e8a8e76b14096daa4fc9a6fdf3&type=3#Spritesheet_UI_Flat_8");
+    background-color: rgb(255, 255, 255);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    transition-duration: 0.2s;
+}
