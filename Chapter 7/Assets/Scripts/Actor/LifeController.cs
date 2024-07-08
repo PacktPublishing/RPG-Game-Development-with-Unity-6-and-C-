@@ -1,3 +1,4 @@
+using System;
 using Fight;
 using UnityEngine;
 
@@ -5,11 +6,14 @@ namespace BasicFiniteStateMachine
 {
     public class LifeController : MonoBehaviour, IReceiveDamage, IHaveHealth
     {
+        public int MaxHealth { get; set; }
         [SerializeField] private DamageTaker[] damageTakers;
         [SerializeField] private int health = 100;
         public int Health => health;
+
         private IBlocker _blocker;
 
+        public event Action HealthChanged;
 
         public void ReceiveDamage(int damage)
         {
@@ -20,7 +24,8 @@ namespace BasicFiniteStateMachine
             }
 
             health -= damage;
-            if (health < 0)
+            HealthChanged?.Invoke();
+            if (health <= 0)
             {
                 Destroy(gameObject);
             }
@@ -29,6 +34,7 @@ namespace BasicFiniteStateMachine
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
+            MaxHealth = health;
             foreach (var taker in damageTakers)
             {
                 taker.RegisterDamageReceiver(this);

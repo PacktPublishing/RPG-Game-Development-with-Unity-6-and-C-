@@ -123,6 +123,9 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -2756307806781422365, guid: 52a6f12f693f1fc4eb0b20629f91e14a,
       type: 3}
+  _pauseMenuHandler: {fileID: 0}
+  _playerCamera: {fileID: 0}
+  _attacker: {fileID: 4293810450530062007}
 --- !u!114 &5852953347935477359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,6 +342,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7328386576482980419}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4293810450530062007 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6783834020258389236, guid: d018255480ab4fc45830c88970c9cede,
+    type: 3}
+  m_PrefabInstance: {fileID: 7328386576482980419}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21dc7ec1c32f40d4c9570b82c0d03076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &7433680853006878804 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 187486086549428759, guid: d018255480ab4fc45830c88970c9cede,

@@ -11,6 +11,7 @@ namespace BasicFiniteStateMachine
         [SerializeField] private float _speed = 1;
         [SerializeField] private Animator _animator;
         [SerializeField] private Sensor _sensor;
+        [SerializeField] private Attacker _attacker;
 
         public bool IsBlocking { get; private set; }
 
@@ -53,12 +54,12 @@ namespace BasicFiniteStateMachine
                 return;
             }
 
-            _animator.SetTrigger("Slash");
+            _attacker.Attack();
         }
 
         public bool IsAttacking()
         {
-            return _animator.GetCurrentAnimatorStateInfo(0).IsName("Slash");
+            return _attacker.IsAttacking;
         }
     }
 }

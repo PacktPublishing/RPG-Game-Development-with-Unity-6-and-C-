@@ -21,21 +21,27 @@ public class PlayerCharacterController : MonoBehaviour, IBlocker
     private PauseMenuHandler _pauseMenuHandler;
     [SerializeField]
     private CinemachineBrain _playerCamera;
+    [SerializeField]
+    private Attacker _attacker;
     private Vector2 _moveInput;
     private bool _isWalking;
     private bool _isPaused;
 
     public bool IsAttacking()
     {
-        return _animator.GetCurrentAnimatorStateInfo(0).IsName("Slash");
+        return _attacker.IsAttacking;
     }
 
     void Start()
     {
-        _pauseMenuHandler.PauseToggled += OnPauseToggled;
+        PauseMenuHandler.PauseToggled += OnPauseToggled;
         _blockProperty.action.performed += OnBlockDown;
         _blockProperty.action.canceled += OnBlockUp;
         ToggleMouseLock(true);
+    }
+
+    void OnDestroy() {
+        PauseMenuHandler.PauseToggled -= OnPauseToggled;
     }
 
     void FixedUpdate()
@@ -102,7 +108,7 @@ public class PlayerCharacterController : MonoBehaviour, IBlocker
         }
 
         transform.LookAt((GetCameraRotationDirection() * Vector3.forward) + transform.position);
-        _animator.SetTrigger("Slash");
+        _attacker.Attack();
     }
 
     void OnMove(InputValue input)
