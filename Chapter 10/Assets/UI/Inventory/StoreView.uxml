@@ -1,0 +1,8 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:Template name="InvenoryStoreList" src="project://database/Assets/UI/Inventory/InvenoryStoreList.uxml?fileID=9197481963319205126&amp;guid=f1ae2bdc770e13d48862271af224747d&amp;type=3#InvenoryStoreList" />
+    <engine:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: space-around; background-color: rgba(0, 0, 0, 0.39);">
+        <engine:Instance template="InvenoryStoreList" name="BuyingInventory" style="width: auto;" />
+        <engine:Instance template="InvenoryStoreList" name="SellingInventory" style="width: auto;" />
+        <engine:Button text="Close" name="CloseButton" style="max-height: 0; align-self: center;" />
+    </engine:VisualElement>
+</engine:UXML>

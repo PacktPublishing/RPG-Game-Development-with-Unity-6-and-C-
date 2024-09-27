@@ -1,0 +1,12 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: column-reverse; align-items: center; padding-bottom: 20px;">
+        <engine:VisualElement style="flex-grow: 1; flex-direction: row; background-color: rgb(255, 255, 255); height: 128px; width: 640px; position: absolute; flex-wrap: nowrap; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; bottom: auto; left: auto; right: auto; top: auto; justify-content: space-around;">
+            <engine:VisualElement style="flex-grow: 0; width: auto; height: auto; position: relative;">
+                <engine:Image name="CharacterImage" style="height: 90px; width: 90px;" />
+                <engine:Label text="Name" name="CharacterName" style="font-size: 10px; -unity-font-style: bold; -unity-text-align: upper-center;" />
+            </engine:VisualElement>
+            <engine:Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." name="LineDisplay" style="width: 386px; height: 105px; white-space: pre-wrap; text-overflow: clip; overflow: hidden; margin-top: 2px; margin-right: 2px;" />
+            <engine:Button text="Continue" name="ShowNextButton" style="align-self: center;" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

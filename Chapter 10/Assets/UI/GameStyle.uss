@@ -1,0 +1,23 @@
+Button {
+    background-image: url("project://database/Assets/Art/01_Flat_Theme/Sprites/UI_Flat_Button_Large_Lock_01a1.png?fileID=21300000&guid=979a885209ae12647b99f0b7934516e6&type=3#UI_Flat_Button_Large_Lock_01a1");
+    background-color: rgba(255, 255, 255, 0);
+    -unity-background-image-tint-color: rgb(233, 233, 233);
+}
+
+Button:hover {
+    background-image: url("project://database/Assets/Art/01_Flat_Theme/Sprites/UI_Flat_Button_Large_Lock_01a1.png?fileID=21300000&guid=979a885209ae12647b99f0b7934516e6&type=3#UI_Flat_Button_Large_Lock_01a1");
+    background-color: rgba(255, 255, 255, 0);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    transition-duration: 0.2s;
+    scale: 1.1 1.1;
+}
+
+Button:active {
+    background-image: url("project://database/Assets/Art/01_Flat_Theme/Sprites/UI_Flat_Button_Large_Lock_01a1.png?fileID=21300000&guid=979a885209ae12647b99f0b7934516e6&type=3#UI_Flat_Button_Large_Lock_01a1");
+    background-color: rgba(255, 255, 255, 0);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    transition-duration: 0.2s;
+    scale: 1.1 1.1;
+    transition-timing-function: ease-out-bounce;
+    transition-property: all;
+}

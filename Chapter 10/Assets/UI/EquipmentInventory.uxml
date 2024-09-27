@@ -1,0 +1,13 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement style="flex-grow: 1; flex-direction: row;">
+        <engine:Image name="PrevImage" style="height: 60%; align-self: center; width: 30%; background-image: url(&quot;project://database/Assets/Art/01_Flat_Theme/Sprites/UI_Flat_Frame_01_Standard.png?fileID=2800000&amp;guid=d3a637b934dd41e44992e5265430b2a3&amp;type=3#UI_Flat_Frame_01_Standard&quot;); flex-direction: column-reverse;">
+            <engine:Label text="1" name="PrevCount" style="font-size: 15%; color: rgb(255, 255, 255); padding-right: 0; padding-top: 0; padding-bottom: 4%; padding-left: 4%;" />
+        </engine:Image>
+        <engine:Image name="MainImage" style="height: 100%; align-self: center; width: 50%; background-image: url(&quot;project://database/Assets/Art/01_Flat_Theme/Sprites/UI_Flat_Frame_01_Standard.png?fileID=2800000&amp;guid=d3a637b934dd41e44992e5265430b2a3&amp;type=3#UI_Flat_Frame_01_Standard&quot;); flex-direction: column-reverse; font-size: 30px;">
+            <engine:Label text="1" name="MainCount" style="font-size: 15%; color: rgb(255, 255, 255); padding-top: 0; padding-right: 0; padding-bottom: 4%; padding-left: 4%;" />
+        </engine:Image>
+        <engine:Image name="NextImage" style="height: 60%; align-self: center; width: 30%; background-image: url(&quot;project://database/Assets/Art/01_Flat_Theme/Sprites/UI_Flat_Frame_01_Standard.png?fileID=2800000&amp;guid=d3a637b934dd41e44992e5265430b2a3&amp;type=3#UI_Flat_Frame_01_Standard&quot;); flex-direction: column-reverse;">
+            <engine:Label text="1" name="NextCount" style="font-size: 15%; color: rgb(255, 255, 255); padding-left: 4%; padding-bottom: 4%; padding-right: 0; padding-top: 0;" />
+        </engine:Image>
+    </engine:VisualElement>
+</engine:UXML>
