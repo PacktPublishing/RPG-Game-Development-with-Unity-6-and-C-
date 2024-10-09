@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f56b893f695151449a695dc1be7e258b, type: 3}
+  m_Name: IntroductionDialogue
+  m_EditorClassIdentifier: 
+  Lines:
+  - Line: I'm Horizon. I've come to test my skills. What is this place?
+    Character: {fileID: 11400000, guid: cce65c5a236c9fb4b96a24d4be875505, type: 2}
+  - Line: "This is the Arena of Eternal Combat. Warriors from all corners of the
+      world come here to prove their might and claim glory. But it's not just about
+      fighting\u2014it's about survival and honor.\""
+    Character: {fileID: 11400000, guid: b2efda9f53f6d2444a0d7b83a78b3d88, type: 2}
+  - Line: What's the purpose of these battles? Is there a prize?
+    Character: {fileID: 11400000, guid: cce65c5a236c9fb4b96a24d4be875505, type: 2}
+  - Line: "The battles are a tradition, a rite of passage for many. The prize is
+      respect and recognition. Some fight for the thrill.\u201D"
+    Character: {fileID: 11400000, guid: b2efda9f53f6d2444a0d7b83a78b3d88, type: 2}
+  - Line: "The battles are a tradition, a rite of passage for many. The prize is
+      respect and recognition. Some fight for the thrill.\u201D"
+    Character: {fileID: 11400000, guid: b2efda9f53f6d2444a0d7b83a78b3d88, type: 2}
+  - Line: Thank you, Valen. I appreciate the guidance. Maybe we'll face each other
+      in the arena someday.
+    Character: {fileID: 11400000, guid: cce65c5a236c9fb4b96a24d4be875505, type: 2}
+  - Line: Perhaps. But until then, stay sharp, Horizon. This arena has a way of revealing
+      one's true character. Make sure you're ready.
+    Character: {fileID: 11400000, guid: b2efda9f53f6d2444a0d7b83a78b3d88, type: 2}

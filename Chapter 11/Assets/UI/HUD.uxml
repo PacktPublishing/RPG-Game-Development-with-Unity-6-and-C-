@@ -1,0 +1,12 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:Template name="EquipmentInventory" src="project://database/Assets/UI/EquipmentInventory.uxml?fileID=9197481963319205126&amp;guid=7464bf5a760b86148acf8249b7d1381d&amp;type=3#EquipmentInventory" />
+    <Style src="project://database/Assets/UI/HUD.uss?fileID=7433441132597879392&amp;guid=17dcee2e7ded6c947b8d2813bb83022f&amp;type=3#HUD" />
+    <engine:VisualElement style="flex-grow: 1; flex-direction: column-reverse;">
+        <engine:VisualElement style="flex-direction: row; justify-content: space-between; padding-top: 2%; padding-right: 2%; padding-bottom: 2%; padding-left: 2%;">
+            <engine:VisualElement style="flex-grow: 0.5; flex-direction: column-reverse; height: auto; width: auto; flex-shrink: 0; align-items: stretch; align-content: auto;">
+                <engine:ProgressBar value="100" picking-mode="Ignore" style="width: auto; height: auto; align-items: stretch;" />
+            </engine:VisualElement>
+            <engine:Instance template="EquipmentInventory" name="EquipmentInventory" style="flex-grow: 0.25; width: auto; height: 150px;" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
