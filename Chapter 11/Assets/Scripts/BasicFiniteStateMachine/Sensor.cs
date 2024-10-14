@@ -4,7 +4,8 @@ namespace BasicFiniteStateMachine
 {
     public class Sensor : MonoBehaviour
     {
-        [SerializeField] private PlayerCharacterController _player;
+        public static bool IsPlayerAttacking { get; set; }
+        [SerializeField] private Transform _playerTransform;
         [SerializeField] private float _triggerDistance;
         [SerializeField] private float _attackDistance;
         [SerializeField] private float _triggerAngle;
@@ -24,7 +25,7 @@ namespace BasicFiniteStateMachine
             }
             else
             {
-                if(_player.IsAttacking())
+                if(IsPlayerAttacking)
                 {
                     _stateMachine.SwitchState(StateEnum.Block);
                 }
@@ -37,7 +38,7 @@ namespace BasicFiniteStateMachine
 
         public Vector3 GetVectorBetweenPlayerAndActor()
         {
-            return _player.transform.position - transform.position;
+            return _playerTransform.transform.position - transform.position;
         }
     }
 }

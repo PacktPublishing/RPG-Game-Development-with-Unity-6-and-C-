@@ -9,6 +9,7 @@ namespace BasicFiniteStateMachine
         public float MaxPower => _initialExhaustionValue;
         [SerializeField] private float _initialExhaustionValue = 100;
         [SerializeField] private float _timeToHeal = 10;
+        [SerializeField] private Attacker _attacker;
 
         public float Power { get; private set; }
 
@@ -29,6 +30,7 @@ namespace BasicFiniteStateMachine
         {
             Power = _initialExhaustionValue;
             OnPowerChanged?.Invoke();
+            _attacker.AttackStarted += OnAttackStarted;
         }
 
         void Update()
@@ -40,6 +42,11 @@ namespace BasicFiniteStateMachine
                 _timeSinceLastHeal = 0;
                 OnPowerChanged?.Invoke();
             }
+        }
+
+        void OnAttackStarted()
+        {
+            ConsumeExhaustion(10);
         }
     }
 }

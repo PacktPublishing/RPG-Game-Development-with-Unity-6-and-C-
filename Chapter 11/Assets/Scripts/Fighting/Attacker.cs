@@ -1,15 +1,16 @@
-using BasicFiniteStateMachine;
+using System;
 using UnityEngine;
 
 namespace Fight
 {
     public class Attacker : MonoBehaviour
     {
+        public event Action AttackStarted;
+        public event Action AttackEnded;
+
         public bool IsAttacking;
         [SerializeField]
         private DamageCauser _damageCauser;
-        [SerializeField]
-        private ExhaustionController _exhaustionController;
         [SerializeField]
         private Animator _animator;
 
@@ -17,6 +18,7 @@ namespace Fight
         {
             IsAttacking = true;
             _animator.SetTrigger("Slash");
+            AttackStarted?.Invoke();
         }
 
         void SlashStart()
@@ -28,14 +30,7 @@ namespace Fight
         {
             _damageCauser.DisableDamage();
             IsAttacking = false;
-        }
-
-        void OnAttackStarted()
-        {
-            if(_exhaustionController)
-            {
-                _exhaustionController.ConsumeExhaustion(10);
-            }
+            AttackEnded?.Invoke();
         }
     }
 }

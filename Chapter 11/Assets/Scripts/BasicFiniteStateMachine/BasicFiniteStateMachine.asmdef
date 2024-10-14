@@ -1,0 +1,17 @@
+{
+    "name": "BasicFiniteStateMachine",
+    "rootNamespace": "",
+    "references": [
+        "GUID:0cc0651784f369c4da7481bc8f2e4c67",
+        "GUID:0507643d0bb52d94c8972b01ebdc531c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

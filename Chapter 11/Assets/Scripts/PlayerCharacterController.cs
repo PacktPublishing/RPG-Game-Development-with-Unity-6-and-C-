@@ -4,8 +4,6 @@ using Fight;
 using UI;
 using Unity.Cinemachine;
 using Dialogue;
-using UnityEngine.InputSystem.LowLevel;
-using InventorySystem;
 
 public class PlayerCharacterController : MonoBehaviour, IBlocker
 {
@@ -47,6 +45,18 @@ public class PlayerCharacterController : MonoBehaviour, IBlocker
         _blockProperty.action.performed += OnBlockDown;
         _blockProperty.action.canceled += OnBlockUp;
         ToggleMouseLock(true);
+        _attacker.AttackStarted += OnAttackStarted;
+        _attacker.AttackEnded += OnAttackEnded;
+    }
+
+    private void OnAttackEnded()
+    {
+        BasicFiniteStateMachine.Sensor.IsPlayerAttacking = false;
+    }
+
+    private void OnAttackStarted()
+    {
+        BasicFiniteStateMachine.Sensor.IsPlayerAttacking = true;
     }
 
     void OnDestroy() {
