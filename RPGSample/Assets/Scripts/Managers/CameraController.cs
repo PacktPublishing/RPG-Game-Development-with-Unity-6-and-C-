@@ -13,7 +13,7 @@ namespace RPGSample.Managers
         }
 
         // Update is called once per frame
-        void FixedUpdate()
+        void Update()
         {
             transform.SetPositionAndRotation(target.position + offset, Quaternion.LookRotation(target.position - transform.position));
         }
