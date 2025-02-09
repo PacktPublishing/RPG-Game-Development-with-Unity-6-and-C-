@@ -91,6 +91,40 @@ namespace RPGSample.Managers
         {
             if (Grounded)
             {
+                ExecuteJumpInput();
+            }
+            else
+            {
+                ManageFallingState();
+            }
+
+            ApplyGravity();
+
+            void ManageFallingState()
+            {
+                // reset the jump timeout timer
+                _jumpTimeoutDelta = JumpTimeout;
+
+                // fall timeout
+                if (_fallTimeoutDelta >= 0.0f)
+                {
+                    _fallTimeoutDelta -= Time.deltaTime;
+                }
+                else
+                {
+                    // update animator if using character
+                    if (_animator)
+                    {
+                        _animator.SetBool(_animIDFreeFall, true);
+                    }
+                }
+
+                // if we are not grounded, do not jump
+                _isJumping = false;
+            }
+
+            void ExecuteJumpInput()
+            {
                 // reset the fall timeout timer
                 _fallTimeoutDelta = FallTimeout;
 
@@ -126,33 +160,14 @@ namespace RPGSample.Managers
                     _jumpTimeoutDelta -= Time.deltaTime;
                 }
             }
-            else
+
+            void ApplyGravity()
             {
-                // reset the jump timeout timer
-                _jumpTimeoutDelta = JumpTimeout;
-
-                // fall timeout
-                if (_fallTimeoutDelta >= 0.0f)
+                // apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
+                if (_verticalVelocity < _terminalVelocity)
                 {
-                    _fallTimeoutDelta -= Time.deltaTime;
+                    _verticalVelocity += Gravity * Time.deltaTime;
                 }
-                else
-                {
-                    // update animator if using character
-                    if (_animator)
-                    {
-                        _animator.SetBool(_animIDFreeFall, true);
-                    }
-                }
-
-                // if we are not grounded, do not jump
-                _isJumping = false;
-            }
-
-            // apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
-            if (_verticalVelocity < _terminalVelocity)
-            {
-                _verticalVelocity += Gravity * Time.deltaTime;
             }
         }
 
